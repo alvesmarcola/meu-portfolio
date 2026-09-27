@@ -16,7 +16,7 @@ export function About() {
   return (
     <AboutContainer>
       <AboutHeader>
-        <AboutNumber>02 — ABOUT</AboutNumber>
+        <AboutNumber>02 — SOBRE</AboutNumber>
       </AboutHeader>
 
       <AboutContent>
@@ -42,10 +42,10 @@ export function About() {
             <InfoTitle>FOCO</InfoTitle>
 
             <Skills>
-              <span>WEB DEVELOPMENT</span>
-              <span>UI DESIGN</span>
+              <span>LANDING PAGES</span>
+              <span>CRIATIVOS</span>
               <span>TRÁFEGO PAGO</span>
-              <span>AUTOMAÇÕES</span>
+              <span>SITES 3D</span>
             </Skills>
           </InfoBlock>
 

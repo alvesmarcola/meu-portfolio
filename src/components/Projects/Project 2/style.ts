@@ -169,22 +169,26 @@ export const ScopeList = styled.ul`
   }
 `;
 
-export const ProjectPreview = styled.div`
-  width: 100%;
+export const ProjectPreview = styled.a`
+  display: block;
 
+  width: 100%;
   height: 65vh;
   min-height: 400px;
 
   margin-top: 100px;
 
-  background: #e9e6df;
-  color: #181818;
+  background: #181818;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 
-  transition: transform 0.5s ease;
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease;
 
   &:hover {
     transform: scale(0.985);
@@ -193,6 +197,25 @@ export const ProjectPreview = styled.div`
   @media (max-width: 768px) {
     height: 50vh;
     min-height: 300px;
+    margin-top: 60px;
+  }
+`;
+
+export const ProjectImage = styled.img`
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s ease;
+
+  ${ProjectPreview}:hover & {
+    transform: scale(1.035);
+    filter: brightness(0.92);
   }
 `;
 

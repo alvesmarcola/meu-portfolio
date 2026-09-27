@@ -1,3 +1,5 @@
+import projeto2 from "../../../assets/projeto2.png";
+
 import {
   ProjectContainer,
   ProjectLabel,
@@ -11,53 +13,62 @@ import {
   DetailText,
   ScopeList,
   ProjectPreview,
-  PreviewContent,
-  PreviewText,
+  ProjectImage,
 } from "./style";
 
 export function Project2() {
   return (
     <ProjectContainer>
-      <ProjectLabel>(02) PROJECT</ProjectLabel>
+      <ProjectLabel>(02) PROJETO</ProjectLabel>
 
       <ProjectHeader>
         <ProjectInfo>
-          <ProjectType>Product</ProjectType>
+          <ProjectType>PROJETO</ProjectType>
 
           <ProjectName>
-            Creative digital
-            <br />
-            experience
+            Creative 3D
           </ProjectName>
+        </ProjectInfo>
+
+        <ProjectInfo>
+          <ProjectType>TIPO</ProjectType>
+
+          <ProjectName>3D / WEB</ProjectName>
         </ProjectInfo>
       </ProjectHeader>
 
       <DetailsGrid>
         <DetailBlock>
-          <DetailTitle>About</DetailTitle>
+          <DetailTitle>SOBRE</DetailTitle>
 
           <DetailText>
-            A digital project focused on creating a strong visual identity,
-            combining creativity, design and technology into one experience.
+            Experimento visual desenvolvido em 3D, explorando composição,
+            interação e estética para criar uma experiência digital mais
+            imersiva.
           </DetailText>
         </DetailBlock>
 
         <DetailBlock>
-          <DetailTitle>Scope of work</DetailTitle>
+          <DetailTitle>FERRAMENTAS / CONHECIMENTOS</DetailTitle>
 
           <ScopeList>
-            <li>Concept development</li>
-            <li>Web design</li>
-            <li>Creative development</li>
-            <li>Art direction</li>
+            <li>Desenvolvimento 3D</li>
+            <li>Design UX/UI</li>
+            <li>Front-end</li>
+            <li>Criatividade</li>
           </ScopeList>
         </DetailBlock>
       </DetailsGrid>
 
-      <ProjectPreview>
-        <PreviewContent>
-          <PreviewText>PROJECT 02</PreviewText>
-        </PreviewContent>
+      <ProjectPreview
+        href="https://alvesmarcola.github.io/Donut-animated-3D/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ProjectImage
+          src={projeto2}
+          alt="Projeto Creative 3D"
+        />
       </ProjectPreview>
     </ProjectContainer>
   );

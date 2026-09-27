@@ -18,8 +18,16 @@ export function Footer() {
       <SubTitle></SubTitle>
 
       <Graphic>
-        <Arrow>↗</Arrow>
-      </Graphic>
+  <Arrow>
+    <a
+      href="https://wa.me/54997053527"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ↗ 
+    </a>
+  </Arrow>
+</Graphic>
 
       <ContactTitle>* ME CHAME *</ContactTitle>
 
@@ -28,20 +36,20 @@ export function Footer() {
           <ContactItem>
             <span>EMAIL</span>
             <a href="mailto:marco@email.com">
-              marco@email.com
+              alvesbmarco@email.com
             </a>
           </ContactItem>
 
           <ContactItem>
             <span>INSTAGRAM</span>
             <a href="#">
-              @marcoalves
+              @marco_alvesb
             </a>
           </ContactItem>
 
           <ContactItem>
             <span>LINKEDIN</span>
-            <a href="#">
+            <a href="www.linkedin.com/in/omarcolvess">
               Marco Alves
             </a>
           </ContactItem>

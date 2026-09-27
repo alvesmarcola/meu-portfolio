@@ -5,7 +5,7 @@ export const ServicesContainer = styled.section`
 
   padding: 120px 48px 100px;
 
-  background: #e9e6df;
+  background: #ffffff;
   color: #181818;
 
   font-family: Arial, sans-serif;
@@ -34,9 +34,7 @@ export const Top = styled.div`
 
 export const Number = styled.span`
   font-size: 12px;
-
   opacity: 0.55;
-
   white-space: nowrap;
 `;
 
@@ -63,7 +61,7 @@ export const Title = styled.h2`
 export const ServicesList = styled.div`
   width: 100%;
 
-  border-top: 1px solid rgba(24, 24, 24, 0.3);
+  border-top: 1px solid rgba(24, 24, 24, 0.25);
 `;
 
 export const Service = styled.div`
@@ -77,7 +75,7 @@ export const Service = styled.div`
 
   padding: 35px 0;
 
-  border-bottom: 1px solid rgba(24, 24, 24, 0.3);
+  border-bottom: 1px solid rgba(24, 24, 24, 0.25);
 
   transition:
     padding 0.4s ease,

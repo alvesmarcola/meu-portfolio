@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const ProjectsContainer = styled.section<{ $dark?: boolean }>`
-  background: ${({ $dark }) => ($dark ? "#181818" : "#e9e6df")};
-  color: ${({ $dark }) => ($dark ? "#ffffff" : "#181818")};
-
+export const ProjectsContainer = styled.section`
+  width: 100%;
   min-height: 100vh;
+
+  background: #e9e6df;
+  color: #181818;
 
   padding: 0 48px 80px;
 
@@ -18,11 +19,11 @@ export const ProjectsContainer = styled.section<{ $dark?: boolean }>`
   }
 `;
 
-export const ProjectLabel = styled.div<{ $dark?: boolean }>`
+export const ProjectLabel = styled.div`
   display: inline-block;
 
-  background: ${({ $dark }) => ($dark ? "#e9e6df" : "#181818")};
-  color: ${({ $dark }) => ($dark ? "#181818" : "#ffffff")};
+  background: #181818;
+  color: #ffffff;
 
   padding: 14px 55px;
 
@@ -52,9 +53,10 @@ export const ProjectLabel = styled.div<{ $dark?: boolean }>`
 `;
 
 export const ProjectHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   gap: 60px;
 
@@ -75,7 +77,8 @@ export const ProjectHeader = styled.div`
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+
     gap: 35px;
 
     margin-top: 35px;
@@ -83,22 +86,24 @@ export const ProjectHeader = styled.div`
 `;
 
 export const ProjectInfo = styled.div`
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+
+  grid-template-columns: 80px 1fr;
 
   gap: 30px;
 
-  flex: 1;
+  align-items: start;
+
+  min-width: 0;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 10px;
+    grid-template-columns: 70px 1fr;
+
+    gap: 20px;
   }
 `;
 
 export const ProjectType = styled.span`
-  min-width: 80px;
-
   font-size: 13px;
 
   opacity: 0.5;
@@ -128,18 +133,21 @@ export const ProjectName = styled.h2`
 
     letter-spacing: -0.04em;
   }
+
+  @media (max-width: 768px) {
+    font-size: clamp(34px, 10vw, 58px);
+  }
 `;
 
 export const DetailsGrid = styled.div`
-  display: grid;
+  width: 100%;
 
+  display: grid;
   grid-template-columns: 1fr 1fr;
 
-  gap: 100px;
+  gap: 60px;
 
   margin-top: 100px;
-
-  max-width: 1100px;
 
   animation: detailsReveal 0.9s ease 0.3s both;
 
@@ -171,6 +179,10 @@ export const DetailBlock = styled.div`
 
   gap: 30px;
 
+  align-items: start;
+
+  min-width: 0;
+
   @media (max-width: 768px) {
     grid-template-columns: 70px 1fr;
 
@@ -186,6 +198,8 @@ export const DetailTitle = styled.span`
   opacity: 0.45;
 
   letter-spacing: 0.02em;
+
+  line-height: 1.4;
 `;
 
 export const DetailText = styled.p`
@@ -246,91 +260,51 @@ export const ScopeList = styled.ul`
   }
 `;
 
-export const ProjectPreview = styled.div<{ $dark?: boolean }>`
+export const ProjectPreview = styled.div`
   width: 100%;
-
-  height: 65vh;
-
-  min-height: 400px;
 
   margin-top: 100px;
 
-  background: ${({ $dark }) => ($dark ? "#e9e6df" : "#181818")};
+  background: #181818;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   overflow: hidden;
 
   cursor: pointer;
 
-  transition:
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    background 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+
+    transition:
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.4s ease;
+  }
 
   &:hover {
     transform: scale(0.985);
   }
 
+  &:hover img {
+    transform: scale(1.02);
+  }
+
   @media (max-width: 768px) {
-    height: 50vh;
-
-    min-height: 300px;
-
     margin-top: 60px;
-  }
-`;
 
-export const PreviewContent = styled.div<{ $dark?: boolean }>`
-  width: 80%;
-
-  height: 80%;
-
-  border: 1px solid
-    ${({ $dark }) =>
-      $dark
-        ? "rgba(24, 24, 24, 0.2)"
-        : "rgba(255, 255, 255, 0.2)"};
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  transition:
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.4s ease;
-
-  ${ProjectPreview}:hover & {
-    transform: scale(1.03);
-
-    border-color: ${({ $dark }) =>
-      $dark
-        ? "rgba(24, 24, 24, 0.5)"
-        : "rgba(255, 255, 255, 0.5)"};
-  }
-`;
-
-export const PreviewText = styled.span<{ $dark?: boolean }>`
-  color: ${({ $dark }) => ($dark ? "#181818" : "#ffffff")};
-
-  font-size: clamp(30px, 5vw, 80px);
-
-  font-weight: 700;
-
-  letter-spacing: -0.06em;
-
-  transition:
-    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-    letter-spacing 0.5s ease;
-
-  ${ProjectPreview}:hover & {
-    transform: scale(1.04);
-
-    letter-spacing: -0.04em;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 `;

@@ -5,8 +5,8 @@ export const FooterContainer = styled.footer`
 
   padding: 45px 55px 30px;
 
-  background: #ffffff;
-  color: #181818;
+  background: #181818;
+  color: #ffffff;
 
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@ export const Graphic = styled.div`
 
   margin: 20px auto 0;
 
-  border: 2px solid #181818;
+  border: 2px solid #ffffff;
 
   display: flex;
   align-items: center;
@@ -101,11 +101,15 @@ export const Graphic = styled.div`
 
   &:hover {
     transform: rotate(135deg) scale(1.08);
-    background: #181818;
+    background: #ffffff;
   }
 
   &:hover span {
-    color: #ffffff;
+    color: #181818;
+  }
+
+  &:hover a {
+    color: #181818;
   }
 
   @keyframes graphicReveal {
@@ -123,14 +127,6 @@ export const Graphic = styled.div`
   @media (max-width: 768px) {
     margin-top: 50px;
   }
-`;
-
-export const Arrow = styled.span`
-  font-size: clamp(40px, 5vw, 80px);
-
-  transform: rotate(-45deg);
-
-  transition: color 0.3s ease;
 `;
 
 export const ContactTitle = styled.h3`
@@ -164,7 +160,7 @@ export const BottomContent = styled.div`
   justify-content: space-between;
   align-items: flex-end;
 
-  border-top: 1px solid #181818;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
 
   padding-top: 20px;
 
@@ -198,13 +194,28 @@ export const ContactItem = styled.div`
   }
 
   a {
-    color: #181818;
+    color: #ffffff;
     text-decoration: none;
 
     transition: opacity 0.3s ease;
 
     &:hover {
       opacity: 0.4;
+    }
+  }
+`;
+
+export const Arrow = styled.div`
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translate(5px, -5px);
     }
   }
 `;
