@@ -22,7 +22,7 @@ export function Projects() {
 
       <ProjectHeader>
         <ProjectInfo>
-          <ProjectType>Project</ProjectType>
+          <ProjectType>Projeto</ProjectType>
 
           <ProjectName>
             Advocacia
@@ -32,7 +32,7 @@ export function Projects() {
         </ProjectInfo>
 
         <ProjectInfo>
-          <ProjectType>Type</ProjectType>
+          <ProjectType>Tipo</ProjectType>
 
           <ProjectName>Website</ProjectName>
         </ProjectInfo>
@@ -40,7 +40,7 @@ export function Projects() {
 
       <DetailsGrid>
         <DetailBlock>
-          <DetailTitle>ABOUT</DetailTitle>
+          <DetailTitle>SOBRE</DetailTitle>
 
           <DetailText>
             Website desenvolvido para apresentar uma marca de forma
@@ -50,13 +50,12 @@ export function Projects() {
         </DetailBlock>
 
         <DetailBlock>
-          <DetailTitle>SCOPE OF WORK</DetailTitle>
+          <DetailTitle>Ferramentas - conhecimentos</DetailTitle>
 
           <ScopeList>
             <li>UI Design</li>
-            <li>Web Development</li>
-            <li>Responsive Design</li>
-            <li>Deployment</li>
+            <li>Front-end </li>
+            <li>Design Responsivo</li>
           </ScopeList>
         </DetailBlock>
       </DetailsGrid>
