@@ -19,7 +19,7 @@ export function Header() {
 
         <RightContent>
           <span>MARCO ALVES</span>
-          <span>DESENVOLVEDOR WEB</span>
+          <span>DESENVOLVEDOR FRONT-END</span>
           <span>GESTOR DE TRÁFEGO</span>
         </RightContent>
       </TopContent>

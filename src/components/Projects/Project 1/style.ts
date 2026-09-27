@@ -184,9 +184,13 @@ export const DetailBlock = styled.div`
   min-width: 0;
 
   @media (max-width: 768px) {
-    grid-template-columns: 70px 1fr;
+    display: flex;
 
-    gap: 20px;
+    flex-direction: column;
+
+    gap: 18px;
+
+    width: 100%;
   }
 `;
 
@@ -200,6 +204,12 @@ export const DetailTitle = styled.span`
   letter-spacing: 0.02em;
 
   line-height: 1.4;
+
+  @media (max-width: 768px) {
+    display: block;
+
+    width: 100%;
+  }
 `;
 
 export const DetailText = styled.p`
@@ -215,6 +225,10 @@ export const DetailText = styled.p`
 
   strong {
     font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
   }
 `;
 
@@ -236,6 +250,8 @@ export const ScopeList = styled.ul`
   line-height: 1.4;
 
   opacity: 0.8;
+
+  width: 100%;
 
   li {
     transition:

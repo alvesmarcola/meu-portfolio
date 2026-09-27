@@ -47,6 +47,7 @@ export const ProjectHeader = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 35px;
+    margin-top: 35px;
   }
 `;
 
@@ -88,6 +89,10 @@ export const ProjectName = styled.h2`
   &:hover {
     transform: translateX(10px);
   }
+
+  @media (max-width: 768px) {
+    font-size: clamp(34px, 10vw, 58px);
+  }
 `;
 
 export const DetailsGrid = styled.div`
@@ -101,7 +106,9 @@ export const DetailsGrid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+
     gap: 50px;
+
     margin-top: 60px;
   }
 `;
@@ -113,16 +120,37 @@ export const DetailBlock = styled.div`
 
   gap: 30px;
 
+  align-items: start;
+
+  min-width: 0;
+
   @media (max-width: 768px) {
-    grid-template-columns: 70px 1fr;
-    gap: 20px;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    width: 100%;
   }
 `;
 
 export const DetailTitle = styled.span`
   font-size: 12px;
 
+  text-transform: uppercase;
+
   opacity: 0.45;
+
+  letter-spacing: 0.02em;
+
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    display: block;
+
+    width: 100%;
+  }
 `;
 
 export const DetailText = styled.p`
@@ -135,20 +163,30 @@ export const DetailText = styled.p`
   line-height: 1.5;
 
   opacity: 0.8;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const ScopeList = styled.ul`
   margin: 0;
+
   padding: 0;
 
   list-style: none;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 8px;
 
+  width: 100%;
+
   font-size: 15px;
+
+  line-height: 1.4;
 
   opacity: 0.8;
 
@@ -159,11 +197,15 @@ export const ScopeList = styled.ul`
 
     &::before {
       content: "•";
+
       margin-right: 10px;
+
+      opacity: 0.6;
     }
 
     &:hover {
       transform: translateX(6px);
+
       opacity: 1;
     }
   }
@@ -174,6 +216,7 @@ export const ProjectPreview = styled.a`
 
   width: 100%;
   height: 65vh;
+
   min-height: 400px;
 
   margin-top: 100px;
@@ -196,7 +239,9 @@ export const ProjectPreview = styled.a`
 
   @media (max-width: 768px) {
     height: 50vh;
+
     min-height: 300px;
+
     margin-top: 60px;
   }
 `;
@@ -215,6 +260,7 @@ export const ProjectImage = styled.img`
 
   ${ProjectPreview}:hover & {
     transform: scale(1.035);
+
     filter: brightness(0.92);
   }
 `;
@@ -229,6 +275,7 @@ export const PreviewContent = styled.div`
   color: #181818;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 `;
