@@ -1,45 +1,4 @@
-import {
-  MarqueeContainer,
-  MarqueeTrack,
-  MarqueeGroup,
-  MarqueeItem,
-} from "./style";
-
-const items = [
-  "Desenvolvimento front-end",
-  "Criativos",
-  "Sites 3D",
-  "tráfego pago",
-  "Desenvolvimento front-end",
-  "Criativos",
-  "Sites 3D",
-  "tráfego pago",
-  "Desenvolvimento front-end",
-  "Criativos",
-  "Sites 3D",
-  "tráfego pago",
-];
-
-function MarqueeGroupContent() {
-  return (
-    <MarqueeGroup>
-      {items.map((item, index) => (
-        <MarqueeItem key={`${item}-${index}`}>
-          {item}
-          <span>✦</span>
-        </MarqueeItem>
-      ))}
-    </MarqueeGroup>
-  );
-}
-
-export function Marquee() {
-  return (
-    <MarqueeContainer>
-      <MarqueeTrack>
-        <MarqueeGroupContent />
-        <MarqueeGroupContent />
-      </MarqueeTrack>
-    </MarqueeContainer>
-  );
-}
+import { MarqueeContainer, MarqueeTrack, MarqueeGroup, MarqueeItem } from "./style";
+import { useLanguage } from "../../i18n/useLanguage";
+function MarqueeGroupContent() { const { t } = useLanguage(); const items=[...t.marquee,...t.marquee,...t.marquee]; return <MarqueeGroup>{items.map((item,index)=><MarqueeItem key={`${item}-${index}`}>{item}<span>✦</span></MarqueeItem>)}</MarqueeGroup>; }
+export function Marquee(){return <MarqueeContainer><MarqueeTrack><MarqueeGroupContent/><MarqueeGroupContent/></MarqueeTrack></MarqueeContainer>;}

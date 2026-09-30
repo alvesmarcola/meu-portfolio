@@ -1,38 +1,18 @@
-import {
-  HeaderContainer,
-  TopContent,
-  LeftContent,
-  RightContent,
-  Role,
-  BigTitle,
-} from "./style";
+import { HeaderContainer, TopContent, LeftContent, RightContent, LangButton, Role, BigTitle } from "./style";
+import { useLanguage } from "../../i18n/useLanguage";
 
 export function Header() {
+  const { t, lang, toggleLang } = useLanguage();
+  const h = t.header;
   return (
     <HeaderContainer>
       <TopContent>
-        <LeftContent>
-          <span>25 SEP, 2026</span>
-          <strong>Desenvolvimento criativo</strong>
-          <span>PORTFOLIO — 01</span>
-        </LeftContent>
-
-        <RightContent>
-          <span>MARCO ALVES</span>
-          <span>DESENVOLVEDOR FRONT-END</span>
-          <span>GESTOR DE TRÁFEGO</span>
-        </RightContent>
+        <LeftContent><span>{h.date}</span><strong>{h.subtitle}</strong><span>{h.portfolioLabel}</span></LeftContent>
+        <LangButton type="button" onClick={toggleLang} aria-label={h.switchLabel}>{lang === "pt" ? "EN" : "PT"}</LangButton>
+        <RightContent><span>{h.name}</span><span>{h.jobFrontend}</span><span>{h.jobTraffic}</span></RightContent>
       </TopContent>
-
-      <Role>
-        <span>Desenvolvedor</span>
-        <span>/</span>
-        <span>Desenvolvimento 3D</span>
-        <span>/</span>
-        <span>Criativos</span>
-      </Role>
-
-      <BigTitle>Portfolio</BigTitle>
+      <Role><span>{h.roles[0]}</span><span>/</span><span>{h.roles[1]}</span><span>/</span><span>{h.roles[2]}</span></Role>
+      <BigTitle>{h.bigTitle}</BigTitle>
     </HeaderContainer>
   );
 }

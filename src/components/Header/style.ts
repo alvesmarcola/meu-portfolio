@@ -188,3 +188,23 @@ export const BigTitle = styled.h1`
     }
   }
 `;
+
+export const LangButton = styled.button`
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #181818;
+  background: transparent;
+  border: 1px solid #181818;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  &:hover { background: #181818; color: #ffffff; }
+  @media (max-width: 768px) { top: 28px; }
+`;
