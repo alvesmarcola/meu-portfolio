@@ -22,12 +22,15 @@ const pt = {
     bigTitle: "Portfolio",
   },
 
-  // Itens base do marquee (o componente repete 3x para manter o efeito)
-  marquee: ["Desenvolvimento front-end", "Criativos", "Sites 3D", "tráfego pago"],
+  marquee: [
+    "Desenvolvimento front-end",
+    "Criativos",
+    "Sites 3D",
+    "tráfego pago",
+  ],
 
   about: {
     label: "02 — SOBRE",
-    // 3 linhas; a do meio é o destaque (Highlight)
     title: ["EU CRIO", "EXPERIÊNCIAS", "DIGITAIS."],
     name: "MARCO ALVES",
     description:
@@ -39,7 +42,6 @@ const pt = {
   },
 
   projects: {
-    // Rótulos compartilhados pelos Projetos 1 e 2
     label: "PROJETO",
     typeLabel: "TIPO",
     aboutTitle: "SOBRE",
@@ -47,11 +49,13 @@ const pt = {
 
     project1: {
       number: "(01) PROJETO",
-      type: "SITE",
+      name: "M Bruno Corretora de Seguros",
+      type: "WEBSITE",
       description:
-        "Website desenvolvido para apresentar uma profissional de social media e seus serviços, combinando identidade visual, comunicação estratégica e uma experiência digital moderna.",
+        "Website desenvolvido para apresentar a corretora, facilitar a simulação de seguros e conectar clientes ao atendimento pelo WhatsApp.",
       tools: ["UI Design", "Front-end", "Design Responsivo"],
-      imageAlt: "Projeto Eduarda Alves Social Media",
+      alt: "Projeto M Bruno Corretora de Seguros",
+      link: "https://corretora-mbruno.vercel.app/",
     },
 
     project2: {
@@ -59,7 +63,12 @@ const pt = {
       type: "3D / WEB",
       description:
         "Experimento visual desenvolvido em 3D, explorando composição, interação e estética para criar uma experiência digital mais imersiva.",
-      tools: ["Desenvolvimento 3D", "Design UX/UI", "Front-end", "Criatividade"],
+      tools: [
+        "Desenvolvimento 3D",
+        "Design UX/UI",
+        "Front-end",
+        "Criatividade",
+      ],
       imageAlt: "Projeto Creative 3D",
     },
   },
@@ -67,6 +76,7 @@ const pt = {
   services: {
     label: "03 — SERVIÇOS",
     title: ["O QUE EU", "POSSO CRIAR."],
+
     items: [
       {
         title: "LANDING PAGES",
@@ -124,7 +134,12 @@ const en: Dict = {
     bigTitle: "Portfolio",
   },
 
-  marquee: ["Front-end development", "Creatives", "3D websites", "paid traffic"],
+  marquee: [
+    "Front-end development",
+    "Creatives",
+    "3D websites",
+    "paid traffic",
+  ],
 
   about: {
     label: "02 — ABOUT",
@@ -146,11 +161,13 @@ const en: Dict = {
 
     project1: {
       number: "(01) PROJECT",
+      name: "M Bruno Insurance Broker",
       type: "WEBSITE",
       description:
-        "Website built to showcase a social media professional and her services, combining visual identity, strategic communication and a modern digital experience.",
+        "Website designed to present the insurance broker, simplify insurance quotes and connect clients directly with WhatsApp support.",
       tools: ["UI Design", "Front-end", "Responsive Design"],
-      imageAlt: "Eduarda Alves Social Media project",
+      alt: "M Bruno Insurance Broker project",
+      link: "https://corretora-mbruno.vercel.app/",
     },
 
     project2: {
@@ -158,7 +175,12 @@ const en: Dict = {
       type: "3D / WEB",
       description:
         "Visual experiment built in 3D, exploring composition, interaction and aesthetics to create a more immersive digital experience.",
-      tools: ["3D Development", "UX/UI Design", "Front-end", "Creativity"],
+      tools: [
+        "3D Development",
+        "UX/UI Design",
+        "Front-end",
+        "Creativity",
+      ],
       imageAlt: "Creative 3D project",
     },
   },
@@ -166,6 +188,7 @@ const en: Dict = {
   services: {
     label: "03 — SERVICES",
     title: ["WHAT I", "CAN CREATE."],
+
     items: [
       {
         title: "LANDING PAGES",
@@ -203,4 +226,7 @@ const en: Dict = {
   },
 };
 
-export const translations: Record<Lang, Dict> = { pt, en };
+export const translations: Record<Lang, Dict> = {
+  pt,
+  en,
+};

@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
-export const ProjectsContainer = styled.section`
-  width: 100%;
+export const ProjectContainer = styled.section`
   min-height: 100vh;
-
-  background: #e9e6df;
-  color: #181818;
 
   padding: 0 48px 80px;
 
-  position: relative;
-  overflow: hidden;
+  background: #rgb(233, 230, 223);
+  color: #000;
 
   font-family: Arial, sans-serif;
+
+  overflow: hidden;
 
   @media (max-width: 768px) {
     padding: 0 20px 50px;
@@ -22,29 +20,15 @@ export const ProjectsContainer = styled.section`
 export const ProjectLabel = styled.div`
   display: inline-block;
 
-  background: #181818;
-  color: #ffffff;
-
   padding: 14px 55px;
-
-  font-size: 13px;
-  font-weight: 600;
 
   margin-left: 20px;
 
-  animation: labelReveal 0.8s ease both;
+  background: #e9e6df;
+  color: #181818;
 
-  @keyframes labelReveal {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  font-size: 13px;
+  font-weight: 600;
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -53,62 +37,40 @@ export const ProjectLabel = styled.div`
 `;
 
 export const ProjectHeader = styled.div`
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 
   gap: 60px;
 
   margin-top: 50px;
 
-  animation: contentReveal 0.9s ease 0.15s both;
-
-  @keyframes contentReveal {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-
+    flex-direction: column;
     gap: 35px;
-
     margin-top: 35px;
   }
 `;
 
 export const ProjectInfo = styled.div`
-  display: grid;
-
-  grid-template-columns: 80px 1fr;
+  display: flex;
+  align-items: flex-start;
 
   gap: 30px;
 
-  align-items: start;
-
-  min-width: 0;
+  flex: 1;
 
   @media (max-width: 768px) {
-    grid-template-columns: 70px 1fr;
-
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
   }
 `;
 
 export const ProjectType = styled.span`
+  min-width: 80px;
+
   font-size: 13px;
 
   opacity: 0.5;
-
-  line-height: 1.4;
 `;
 
 export const ProjectName = styled.h2`
@@ -122,16 +84,10 @@ export const ProjectName = styled.h2`
 
   letter-spacing: -0.055em;
 
-  transition:
-    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-    letter-spacing 0.5s ease;
-
-  cursor: default;
+  transition: transform 0.4s ease;
 
   &:hover {
-    transform: translateX(8px);
-
-    letter-spacing: -0.04em;
+    transform: translateX(10px);
   }
 
   @media (max-width: 768px) {
@@ -140,28 +96,13 @@ export const ProjectName = styled.h2`
 `;
 
 export const DetailsGrid = styled.div`
-  width: 100%;
-
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
-  gap: 60px;
+  gap: 100px;
 
   margin-top: 100px;
-
-  animation: detailsReveal 0.9s ease 0.3s both;
-
-  @keyframes detailsReveal {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -223,10 +164,6 @@ export const DetailText = styled.p`
 
   opacity: 0.8;
 
-  strong {
-    font-weight: 700;
-  }
-
   @media (max-width: 768px) {
     max-width: 100%;
   }
@@ -245,27 +182,25 @@ export const ScopeList = styled.ul`
 
   gap: 8px;
 
+  width: 100%;
+
   font-size: 15px;
 
   line-height: 1.4;
 
   opacity: 0.8;
 
-  width: 100%;
-
   li {
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
-
-    cursor: default;
 
     &::before {
       content: "•";
 
       margin-right: 10px;
 
-      opacity: 0.5;
+      opacity: 0.6;
     }
 
     &:hover {
@@ -276,51 +211,62 @@ export const ScopeList = styled.ul`
   }
 `;
 
-export const ProjectPreview = styled.div`
+export const ProjectPreview = styled.a`
+  display: flex;
+
   width: 100%;
+  height: 65vh;
+  min-height: 400px;
 
   margin-top: 100px;
 
-  background: #181818;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+  background: #111111;
 
   overflow: hidden;
 
   cursor: pointer;
 
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
 
-  img {
-    display: block;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    height: auto;
-
-    object-fit: cover;
-
-    transition:
-      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-      filter 0.4s ease;
-  }
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
     transform: scale(0.985);
   }
 
-  &:hover img {
+  @media (max-width: 768px) {
+    height: 50vh;
+    min-height: 300px;
+
+    margin-top: 60px;
+  }
+`;
+
+export const ProjectImage = styled.img`
+  width: 100%;
+  
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition:
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s ease;
+
+  ${ProjectPreview}:hover & {
     transform: scale(1.02);
+
+    filter: brightness(0.92);
   }
 
   @media (max-width: 768px) {
-    margin-top: 60px;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+    width: 85%;
+    height: 85%;
   }
 `;

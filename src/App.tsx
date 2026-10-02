@@ -3,12 +3,11 @@ import "./App.css";
 import { Header } from "./components/Header";
 import { Marquee } from "./components/Marquee";
 import { About } from "./components/About";
-import { Projects } from "./components/Projects/Project 1";
-
-import { Footer } from "./components/Footer";
+import { Project1 } from "./components/Projects/Project 1";
 import { Project2 } from "./components/Projects/Project 2";
 import { Services } from "./components/Services";
 import { CTA } from "./components/CTA";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -19,8 +18,8 @@ function App() {
 
       <About />
 
-      <Projects />
-    
+      <Project1 />
+
       <Project2 />
 
       <Services />
