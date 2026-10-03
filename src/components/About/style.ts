@@ -85,6 +85,8 @@ export const MainText = styled.h2`
     line-height: 0.86;
 
     letter-spacing: -0.065em;
+
+    overflow-wrap: anywhere;
   }
 
   @media (max-width: 500px) {

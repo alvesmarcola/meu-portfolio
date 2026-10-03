@@ -239,10 +239,16 @@ export const ProjectPreview = styled.a`
   }
 
   @media (max-width: 768px) {
-    height: 50vh;
-    min-height: 300px;
+    height: auto;
+    min-height: 0;
 
     margin-top: 60px;
+
+    background: transparent;
+
+    &:hover {
+      transform: none;
+    }
   }
 `;
 
@@ -266,7 +272,15 @@ export const ProjectImage = styled.img`
   }
 
   @media (max-width: 768px) {
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+
+    object-fit: contain;
+
+    ${ProjectPreview}:hover & {
+      transform: none;
+      filter: none;
+    }
   }
 `;

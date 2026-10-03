@@ -190,7 +190,7 @@ export const BigTitle = styled.h1`
 `;
 
 export const LangButton = styled.button`
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -199,12 +199,13 @@ export const LangButton = styled.button`
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: #181818;
-  background: transparent;
-  border: 1px solid #181818;
+  color: #ffffff;
+  background: rgba(50, 50, 50, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
+  backdrop-filter: blur(6px);
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  &:hover { background: #181818; color: #ffffff; }
+  &:hover { background: #2a2a2a; color: #ffffff; }
   @media (max-width: 768px) { top: 28px; }
 `;

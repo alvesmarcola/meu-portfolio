@@ -238,11 +238,17 @@ export const ProjectPreview = styled.a`
   }
 
   @media (max-width: 768px) {
-    height: 50vh;
+    height: auto;
 
-    min-height: 300px;
+    min-height: 0;
 
     margin-top: 60px;
+
+    background: transparent;
+
+    &:hover {
+      transform: none;
+    }
   }
 `;
 
@@ -262,6 +268,18 @@ export const ProjectImage = styled.img`
     transform: scale(1.035);
 
     filter: brightness(0.92);
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+
+    object-fit: contain;
+
+    ${ProjectPreview}:hover & {
+      transform: none;
+
+      filter: none;
+    }
   }
 `;
 
