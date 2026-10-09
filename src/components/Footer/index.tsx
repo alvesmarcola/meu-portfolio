@@ -25,7 +25,7 @@ export function Footer() {
       <Graphic>
         <Arrow>
           <a
-            href="https://wa.me/54997053527"
+            href="http://wa.me//54999968814"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
