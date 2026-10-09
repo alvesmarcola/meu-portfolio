@@ -22,6 +22,8 @@ function App() {
 
       <Project2 />
 
+      <Marquee />
+
       <Services />
 
       <CTA />

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ProjectContainer = styled.section`
-  --project-accent: #168fe2;
-  --project-glow: rgba(22, 143, 226, 0.2);
+  --project-accent: #d9d2c2;
+  --project-glow: rgba(233, 230, 223, 0.08);
 
   position: relative;
   isolation: isolate;
@@ -16,23 +16,20 @@ export const ProjectContainer = styled.section`
   overflow: hidden;
   background:
     radial-gradient(ellipse at 78% 58%, var(--project-glow), transparent 42%),
-    #181818;
+    linear-gradient(135deg, #1d1d1b 0%, #121212 54%, #1a1a18 100%);
   color: #e9e6df;
   font-family: Arial, sans-serif;
 
   &[data-project="donut"] {
-    --project-accent: #f04c89;
-    --project-glow: rgba(240, 76, 137, 0.2);
-
     background:
       radial-gradient(ellipse at 72% 60%, var(--project-glow), transparent 43%),
-      #181818;
+      linear-gradient(145deg, #191918 0%, #111 56%, #1b1b19 100%);
   }
 
   @media (max-width: 768px) {
     display: block;
     min-height: auto;
-    padding: 0 20px 76px;
+    padding: 0 clamp(16px, 5.2vw, 24px) 68px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -110,8 +107,8 @@ export const ProjectHeader = styled.div`
   @media (max-width: 768px) {
     align-items: flex-start;
     flex-direction: column;
-    gap: 30px;
-    margin-top: 42px;
+    gap: 26px;
+    margin-top: 38px;
 
     > :last-child {
       flex: 1;
@@ -120,9 +117,9 @@ export const ProjectHeader = styled.div`
     }
 
     > :last-child h2 {
-      font-size: clamp(36px, 10vw, 58px);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
+      font-size: clamp(34px, 9.5vw, 54px);
+      line-height: 1;
+      letter-spacing: -0.055em;
     }
   }
 `;
@@ -165,8 +162,8 @@ export const ProjectName = styled.h2`
   }
 
   @media (max-width: 768px) {
-    max-width: 15ch;
-    font-size: clamp(36px, 10vw, 58px);
+    max-width: 16ch;
+    font-size: clamp(34px, 9.5vw, 54px);
   }
 `;
 
@@ -305,8 +302,8 @@ export const ProjectPreview = styled.a`
     border-radius: 50%;
     background: var(--project-glow);
     content: "";
-    filter: blur(65px);
-    opacity: 0.72;
+    filter: blur(72px);
+    opacity: 0.58;
     transform: translate3d(var(--parallax-x), var(--parallax-y), -50px) scale(0.9);
     transition:
       transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1),
@@ -319,7 +316,7 @@ export const ProjectPreview = styled.a`
   }
 
   [data-revealed="true"] &::before {
-    opacity: 0.72;
+    opacity: 0.58;
     transform: translate3d(var(--parallax-x), var(--parallax-y), -50px) scale(1);
   }
 
@@ -331,7 +328,7 @@ export const ProjectPreview = styled.a`
   @media (max-width: 768px) {
     height: auto;
     min-height: 0;
-    margin-top: 46px;
+    margin-top: 38px;
   }
 `;
 
@@ -429,7 +426,7 @@ export const BrowserBar = styled.div`
   gap: 10px;
   padding: 0 12px;
   border-bottom: 1px solid rgba(233, 230, 223, 0.12);
-  background: linear-gradient(180deg, #292929, #202020);
+  background: linear-gradient(180deg, #292927, #20201f);
 `;
 
 export const BrowserControls = styled.span`
@@ -447,18 +444,18 @@ export const BrowserControls = styled.span`
   }
 
   &::before {
-    border-color: #f17f73;
-    background: #f17f73;
+    border-color: rgba(233, 230, 223, 0.55);
+    background: rgba(233, 230, 223, 0.55);
   }
 
   &::after {
-    border-color: #e7bf6b;
-    background: #e7bf6b;
+    border-color: rgba(233, 230, 223, 0.38);
+    background: rgba(233, 230, 223, 0.38);
   }
 
   span {
-    border-color: #77bf82;
-    background: #77bf82;
+    border-color: rgba(233, 230, 223, 0.22);
+    background: rgba(233, 230, 223, 0.22);
   }
 `;
 
@@ -667,16 +664,16 @@ export const MobileComposition = styled.div`
   position: relative;
   display: none;
   width: 100%;
-  height: clamp(340px, 108vw, 500px);
+  height: clamp(320px, 96vw, 440px);
   overflow: hidden;
   border: 1px solid rgba(233, 230, 223, 0.14);
-  border-radius: 5px;
+  border-radius: 8px;
   background:
-    radial-gradient(ellipse at 75% 40%, var(--project-glow), transparent 60%),
-    #121212;
+    radial-gradient(ellipse at 72% 42%, rgba(233, 230, 223, 0.055), transparent 62%),
+    linear-gradient(145deg, #20201e, #121212 62%, #191918);
   box-shadow:
-    0 35px 70px rgba(0, 0, 0, 0.48),
-    inset 0 0 50px rgba(0, 0, 0, 0.35);
+    0 28px 58px rgba(0, 0, 0, 0.42),
+    inset 0 0 44px rgba(0, 0, 0, 0.32);
   transform:
     perspective(1000px)
     rotateX(var(--rotate-x))
@@ -689,16 +686,21 @@ export const MobileComposition = styled.div`
   }
 
   @media (max-width: 420px) {
-    height: clamp(330px, 105vw, 420px);
+    height: clamp(300px, 100vw, 370px);
+  }
+
+  @media (hover: none) and (max-width: 768px) {
+    transform: none;
+    transition: none;
   }
 `;
 
 export const MobileDesktop = styled.div`
   position: absolute;
-  top: 9%;
-  right: -8%;
-  width: 88%;
-  height: 63%;
+  top: 15%;
+  right: -2%;
+  width: 91%;
+  height: 68%;
   overflow: hidden;
   border: 1px solid rgba(233, 230, 223, 0.2);
   border-radius: 5px;
@@ -706,7 +708,7 @@ export const MobileDesktop = styled.div`
   box-shadow:
     0 25px 45px rgba(0, 0, 0, 0.4),
     0 4px 12px rgba(0, 0, 0, 0.32);
-  transform: translate3d(0, 0, -30px) rotate(2deg);
+  transform: translate3d(0, 0, -24px) rotate(1.5deg);
   transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
 
   img {
@@ -718,17 +720,22 @@ export const MobileDesktop = styled.div`
   }
 
   ${ProjectPreview}:hover & {
-    transform: translate3d(-4px, -3px, -30px) rotate(1deg);
+    transform: translate3d(-3px, -3px, -24px) rotate(1deg);
+  }
+
+  @media (hover: none) and (max-width: 768px) {
+    transform: rotate(1deg);
+    transition: none;
   }
 `;
 
 export const MobilePhone = styled.div`
   position: absolute;
   z-index: 1;
-  top: 3%;
-  left: 3%;
-  width: 70%;
-  height: 94%;
+  top: 8%;
+  left: 9%;
+  width: 48%;
+  height: 84%;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
@@ -737,7 +744,7 @@ export const MobilePhone = styled.div`
     0 25px 50px rgba(0, 0, 0, 0.55),
     0 4px 12px rgba(0, 0, 0, 0.45),
     inset 0 0 0 2px rgba(0, 0, 0, 0.7);
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
   transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
 
   img {
@@ -749,7 +756,12 @@ export const MobilePhone = styled.div`
   }
 
   ${ProjectPreview}:hover & {
-    transform: translateY(-4px) rotate(-3deg);
+    transform: translateY(-3px) rotate(-2.5deg);
+  }
+
+  @media (hover: none) and (max-width: 768px) {
+    transform: rotate(-4deg);
+    transition: none;
   }
 `;
 
