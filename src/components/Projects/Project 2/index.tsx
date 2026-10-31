@@ -1,4 +1,4 @@
-import projeto2 from "../../../assets/projeto2.png";
+import resenhaImg from "../../../assets/resenha-sports.png";
 import {
   ProjectContainer,
   ProjectLabel,
@@ -21,7 +21,6 @@ import {
   BrowserImage,
   FloatingPhone,
   FloatingScreen,
-  FloatingDetail,
   MobileComposition,
   MobileDesktop,
   MobilePhone,
@@ -39,7 +38,7 @@ export function Project2() {
   return (
     <ProjectContainer
       ref={rootRef}
-      data-project="donut"
+      data-project="resenha"
       data-revealed={isVisible}
     >
       <ProjectLabel>{project.number}</ProjectLabel>
@@ -47,7 +46,7 @@ export function Project2() {
       <ProjectHeader>
         <ProjectInfo>
           <ProjectType>{p.label}</ProjectType>
-          <ProjectName>Creative 3D</ProjectName>
+          <ProjectName>{project.name}</ProjectName>
         </ProjectInfo>
         <ProjectInfo>
           <ProjectType>{p.typeLabel}</ProjectType>
@@ -61,6 +60,14 @@ export function Project2() {
           <DetailText>{project.description}</DetailText>
         </DetailBlock>
         <DetailBlock>
+          <DetailTitle>{p.featuresTitle}</DetailTitle>
+          <ScopeList>
+            {project.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ScopeList>
+        </DetailBlock>
+        <DetailBlock>
           <DetailTitle>{p.toolsTitle}</DetailTitle>
           <ScopeList>
             {project.tools.map((tool) => (
@@ -72,16 +79,13 @@ export function Project2() {
 
       <ProjectPreview
         data-project-scene
-        href="https://alvesmarcola.github.io/Donut-animated-3D/"
+        href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={project.imageAlt}
+        aria-label={project.alt}
         tabIndex={isVisible ? undefined : -1}
       >
         <DesktopComposition aria-hidden="true">
-          <FloatingDetail>
-            <img src={projeto2} alt="" loading="lazy" decoding="async" />
-          </FloatingDetail>
           <BrowserWindow>
             <BrowserBar>
               <BrowserControls><span /></BrowserControls>
@@ -89,7 +93,7 @@ export function Project2() {
             </BrowserBar>
             <BrowserScreen>
               <BrowserImage
-                src={projeto2}
+                src={resenhaImg}
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -98,16 +102,16 @@ export function Project2() {
           </BrowserWindow>
           <FloatingPhone>
             <FloatingScreen>
-              <img src={projeto2} alt="" loading="lazy" decoding="async" />
+              <img src={resenhaImg} alt="" loading="lazy" decoding="async" />
             </FloatingScreen>
           </FloatingPhone>
         </DesktopComposition>
         <MobileComposition aria-hidden="true">
           <MobileDesktop>
-            <img src={projeto2} alt="" loading="lazy" decoding="async" />
+            <img src={resenhaImg} alt="" loading="lazy" decoding="async" />
           </MobileDesktop>
           <MobilePhone>
-            <img src={projeto2} alt="" loading="lazy" decoding="async" />
+            <img src={resenhaImg} alt="" loading="lazy" decoding="async" />
           </MobilePhone>
           <MobileParallax />
         </MobileComposition>

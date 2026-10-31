@@ -45,6 +45,7 @@ const pt = {
     label: "PROJETO",
     typeLabel: "TIPO",
     aboutTitle: "SOBRE",
+    featuresTitle: "FUNCIONALIDADES EM DESTAQUE",
     toolsTitle: "FERRAMENTAS / CONHECIMENTOS",
 
     project1: {
@@ -60,16 +61,25 @@ const pt = {
 
     project2: {
       number: "(02) PROJETO",
-      type: "3D / WEB",
+      name: "Resenha Sports Cia",
+      type: "E-COMMERCE",
       description:
-        "Experimento visual desenvolvido em 3D, explorando composição, interação e estética para criar uma experiência digital mais imersiva.",
-      tools: [
-        "Desenvolvimento 3D",
-        "Design UX/UI",
-        "Front-end",
-        "Criatividade",
+        "Plataforma de e-commerce moderna desenvolvida para venda de camisas de futebol, kits retro e vestuário esportivo.",
+      features: [
+        "Catálogo de produtos dinâmico",
+        "Carrinho de compras",
+        "Sistema de pedidos",
+        "Fluxo de pagamento seguro",
       ],
-      imageAlt: "Projeto Creative 3D",
+      tools: [
+        "Next.js",
+        "React",
+        "Supabase",
+        "Tailwind CSS",
+        "Mercado Pago",
+      ],
+      alt: "Projeto E-commerce Resenha Sports Cia",
+      link: "https://alves-store-green.vercel.app/",
     },
   },
 
@@ -157,7 +167,8 @@ const en: Dict = {
     label: "PROJECT",
     typeLabel: "TYPE",
     aboutTitle: "ABOUT",
-    toolsTitle: "TOOLS / SKILLS",
+    featuresTitle: "FEATURED HIGHLIGHTS",
+    toolsTitle: "TOOLS / TECHNOLOGIES",
 
     project1: {
       number: "(01) PROJECT",
@@ -172,16 +183,25 @@ const en: Dict = {
 
     project2: {
       number: "(02) PROJECT",
-      type: "3D / WEB",
+      name: "Resenha Sports Cia",
+      type: "E-COMMERCE",
       description:
-        "Visual experiment built in 3D, exploring composition, interaction and aesthetics to create a more immersive digital experience.",
-      tools: [
-        "3D Development",
-        "UX/UI Design",
-        "Front-end",
-        "Creativity",
+        "Modern e-commerce platform built for selling football jerseys, retro kits and sportswear.",
+      features: [
+        "Dynamic product catalog",
+        "Shopping cart",
+        "Order management system",
+        "Secure payment flow",
       ],
-      imageAlt: "Creative 3D project",
+      tools: [
+        "Next.js",
+        "React",
+        "Supabase",
+        "Tailwind CSS",
+        "Mercado Pago",
+      ],
+      alt: "Resenha Sports Cia E-commerce Project",
+      link: "https://alves-store-green.vercel.app/",
     },
   },
 

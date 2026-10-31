@@ -20,10 +20,10 @@ export const ProjectContainer = styled.section`
   color: #e9e6df;
   font-family: Arial, sans-serif;
 
-  &[data-project="donut"] {
+  &[data-project="resenha"] {
     background:
-      radial-gradient(ellipse at 72% 60%, var(--project-glow), transparent 43%),
-      linear-gradient(145deg, #191918 0%, #111 56%, #1b1b19 100%);
+      radial-gradient(ellipse at 72% 60%, rgba(37, 99, 235, 0.08), transparent 43%),
+      linear-gradient(145deg, #16181d 0%, #101216 56%, #14171d 100%);
   }
 
   @media (max-width: 768px) {
@@ -176,6 +176,11 @@ export const DetailsGrid = styled.div`
   gap: clamp(34px, 5vw, 66px);
   margin-top: 0;
   padding: 34px 0 48px;
+
+  [data-project="resenha"] & {
+    gap: clamp(20px, 3.2vw, 34px);
+    padding: 20px 0 32px;
+  }
 
   [data-revealed="false"] & {
     opacity: 0;
@@ -381,17 +386,16 @@ export const BrowserWindow = styled.div`
     box-shadow 500ms ease;
   backface-visibility: hidden;
 
-  [data-project="donut"] & {
-    top: 5%;
-    right: 4%;
-    width: 92%;
-    height: 76%;
+  [data-project="resenha"] & {
+    top: 6%;
+    right: 2%;
+    width: 93%;
+    height: 77%;
     transform:
       translate3d(var(--window-x), var(--window-y), 0)
       perspective(1400px)
       rotateX(calc(2deg + var(--rotate-x)))
-      rotateY(calc(8deg + var(--rotate-y)))
-      rotateZ(-1deg);
+      rotateY(calc(-8deg + var(--rotate-y)));
   }
 
   [data-revealed="false"] & {
@@ -491,7 +495,7 @@ export const BrowserImage = styled.img`
     transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: right center;
 
-  [data-project="donut"] & {
+  [data-project="resenha"] & {
     height: 100%;
   }
 
@@ -542,18 +546,17 @@ export const FloatingPhone = styled.div`
     transform: translateX(-50%);
   }
 
-  [data-project="donut"] & {
-    top: 39%;
-    right: 4%;
-    left: auto;
-    width: 19%;
-    height: 53%;
+  [data-project="resenha"] & {
+    top: 28%;
+    left: -1%;
+    width: 19.5%;
+    height: 55%;
     transform:
-      translate3d(var(--phone-x), var(--phone-y), 100px)
+      translate3d(var(--phone-x), var(--phone-y), 85px)
       perspective(900px)
-      rotateX(calc(2deg + var(--rotate-x)))
-      rotateY(calc(-11deg + var(--rotate-y)))
-      rotateZ(6deg);
+      rotateX(calc(-1deg + var(--rotate-x)))
+      rotateY(calc(9deg + var(--rotate-y)))
+      rotateZ(-4deg);
   }
 
   [data-revealed="false"] & {
@@ -599,8 +602,9 @@ export const FloatingScreen = styled.div`
     height: auto;
   }
 
-  [data-project="donut"] & img {
-    left: -90%;
+  [data-project="resenha"] & img {
+    top: -10%;
+    left: -35%;
   }
 `;
 
