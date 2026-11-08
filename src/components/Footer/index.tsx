@@ -1,77 +1,38 @@
-import {
-  FooterContainer,
-  MainTitle,
-  SubTitle,
-  Graphic,
-  ContactTitle,
-  BottomContent,
-  ContactInfo,
-  ContactItem,
-  Arrow,
-} from "./style";
-
 import { useLanguage } from "../../i18n/useLanguage";
+import {
+  FooterSection,
+  FooterInner,
+  Copyright,
+  FooterLinks,
+  BackToTopBtn,
+} from "./style";
 
 export function Footer() {
   const { t } = useLanguage();
   const f = t.footer;
+  const n = t.nav;
 
   return (
-    <FooterContainer>
-      <MainTitle>{f.thanks}</MainTitle>
+    <FooterSection>
+      <FooterInner>
+        <Copyright>
+          <strong>{f.name}</strong> — {f.copyright}
+        </Copyright>
 
-      <SubTitle></SubTitle>
+        <FooterLinks>
+          <a href="#projetos">{n.projects}</a>
+          <a href="#sobre">{n.about}</a>
+          <a href="#habilidades">{n.skills}</a>
+          <a href="#curriculo">{n.resume}</a>
+          <a href="#contato">{n.contact}</a>
+        </FooterLinks>
 
-      <Graphic>
-        <Arrow>
-          <a
-            href="http://wa.me//54999968814"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
-            ↗
-          </a>
-        </Arrow>
-      </Graphic>
-
-      <ContactTitle>{f.contactTitle}</ContactTitle>
-
-      <BottomContent>
-        <ContactInfo>
-          <ContactItem>
-            <span>{f.email}</span>
-            <a href="mailto:alvesbmarco@email.com">
-              alvesbmarco@email.com
-            </a>
-          </ContactItem>
-
-          <ContactItem>
-            <span>{f.instagram}</span>
-            <a
-              href="https://www.instagram.com/marco_alvesb"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @marco_alvesb
-            </a>
-          </ContactItem>
-
-          <ContactItem>
-            <span>{f.linkedin}</span>
-            <a
-              href="https://www.linkedin.com/in/omarcolvess"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Marco Alves
-            </a>
-          </ContactItem>
-        </ContactInfo>
-
-        <span>{f.copyright}</span>
-      </BottomContent>
-    </FooterContainer>
+        <BackToTopBtn href="#inicio" aria-label="Voltar ao topo da página">
+          {f.backToTop}
+        </BackToTopBtn>
+      </FooterInner>
+    </FooterSection>
   );
 }
 
+export default Footer;
