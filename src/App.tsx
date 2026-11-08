@@ -1,33 +1,26 @@
 import "./App.css";
 
-import { Header } from "./components/Header";
-import { Marquee } from "./components/Marquee";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { Projects } from "./components/Projects";
 import { About } from "./components/About";
-import { Project1 } from "./components/Projects/Project 1";
-import { Project2 } from "./components/Projects/Project 2";
-import { Services } from "./components/Services";
-import { CTA } from "./components/CTA";
+import { Skills } from "./components/Skills";
+import { Resume } from "./components/Resume";
+import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Header />
-
-      <Marquee />
-
-      <About />
-
-      <Project1 />
-
-      <Project2 />
-
-      <Marquee />
-
-      <Services />
-
-      <CTA />
-
+      <Navbar />
+      <main>
+        <Hero />
+        <Projects />
+        <About />
+        <Skills />
+        <Resume />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
