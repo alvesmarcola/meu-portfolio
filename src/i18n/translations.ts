@@ -70,7 +70,7 @@ const pt = {
     },
     project2: {
       number: "02",
-      name: "Mbrulhos Seguros",
+      name: "MBruno Seguros",
       type: "WEBSITE",
       category: "WEBSITE INSTITUCIONAL & SIMULAÇÃO",
       description:
@@ -82,7 +82,7 @@ const pt = {
       ],
       tools: ["UI Design", "Front-end", "Design Responsivo", "UX/UI"],
       link: "https://corretora-mbruno.vercel.app/",
-      alt: "Projeto Mbrulhos Seguros",
+      alt: "Projeto MBruno Seguros",
     },
   },
 
@@ -311,7 +311,7 @@ const en: Dict = {
     },
     project2: {
       number: "02",
-      name: "Mbrulhos Seguros",
+      name: "MBruno Seguros",
       type: "WEBSITE",
       category: "INSTITUTIONAL WEBSITE & QUOTING",
       description:
@@ -323,7 +323,7 @@ const en: Dict = {
       ],
       tools: ["UI Design", "Front-end", "Responsive Design", "UX/UI"],
       link: "https://corretora-mbruno.vercel.app/",
-      alt: "Mbrulhos Seguros Project",
+      alt: "MBruno Seguros Project",
     },
   },
 

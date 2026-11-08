@@ -91,7 +91,7 @@ export function Projects() {
             </VisualShowcase>
           </ProjectCard>
 
-          {/* Projeto 02 — Mbrulhos Seguros */}
+          {/* Projeto 02 — MBruno Seguros */}
           <ProjectCard>
             <ProjectInfo>
               <ProjectTopRow>
@@ -135,7 +135,7 @@ export function Projects() {
                 <DeviceBadge>
                   <img
                     src={mbrunoPhone}
-                    alt="Mbrulhos Seguros Mobile Version"
+                    alt="MBruno Seguros Mobile Version"
                     loading="lazy"
                   />
                 </DeviceBadge>
